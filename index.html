@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>The O Spot by Chef Jun</title>
+<meta name="description" content="The O Spot by Chef Jun. Beer Fest 2026 is on: pulutan, sizzling plates and ice-cold beer.">
+<link rel="icon" href="assets/logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400&display=swap">
+<style>
+:root{
+  --bg:#140d08; --fg:#f6ead8; --muted:#b9a58a; --line:#3a2a1b; --amber:#ffb21a; --ink:#1a0f05;
+  --display:"Bowlby One","Arial Black",Impact,sans-serif;
+  --cond:"Barlow Condensed","Arial Narrow",sans-serif;
+  --body:"Barlow",system-ui,sans-serif;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 var(--body);
+  background-image:radial-gradient(900px 500px at 50% 0%,rgba(255,106,26,.18),transparent 70%)}
+main{min-height:100%;display:grid;place-items:center;text-align:center;padding-inline:16px;
+  padding-block:calc(40px + env(safe-area-inset-top,0px)) calc(40px + env(safe-area-inset-bottom,0px))}
+.card{display:grid;gap:18px;justify-items:center;max-width:560px}
+.logo{width:clamp(200px,55vw,300px);height:auto;filter:drop-shadow(0 10px 30px rgba(255,106,26,.25))}
+h1{margin:0;font:400 clamp(34px,8vw,56px)/1 var(--display);text-wrap:balance}
+h1 span{color:var(--amber)}
+p{margin:0;color:var(--muted);font:600 16px/1.4 var(--cond);letter-spacing:.12em;text-transform:uppercase}
+.btn{display:inline-block;margin-top:6px;padding:14px 28px;border-radius:999px;background:var(--amber);color:var(--ink);
+  font:700 19px/1 var(--cond);letter-spacing:.1em;text-transform:uppercase;text-decoration:none}
+.btn:hover{filter:brightness(1.08)}
+.btn:focus-visible{outline:3px solid var(--fg);outline-offset:3px}
+footer{color:var(--muted);font:600 13px var(--cond);letter-spacing:.1em;text-transform:uppercase;border-top:1px solid var(--line);padding-top:14px;margin-top:10px}
+</style>
+</head>
+<body>
+<main>
+  <div class="card">
+    <img class="logo" src="assets/logo.png" alt="The O Spot by Chef Jun logo">
+    <h1>Beer Fest <span>2026</span> is on</h1>
+    <p>Pulutan · Sizzling plates · Ice-cold beer</p>
+    <a class="btn" href="menu/">View the menu</a>
+    <footer>The O Spot by Chef Jun · Est. 2025</footer>
+  </div>
+</main>
+</body>
+</html>
