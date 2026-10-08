@@ -1,0 +1,28 @@
+# The O Spot by Chef Jun
+
+> Bar kitchen serving Filipino pulutan, sizzling plates and beer. Established 2025. Prices in Philippine pesos (PHP).
+
+## Pages
+
+- [Home](https://dhanmarlanortiz.github.io/theospot/)
+- [Beer Fest 2026 Menu & Prices](https://dhanmarlanortiz.github.io/theospot/menu/)
+
+## Menu
+
+### Food
+- Chicken Poppers: ₱99.00 (Bite-size crispy chicken with garlic mayo dip)
+- French Fries: ₱99.00 (Golden fries with ketchup)
+- Cheese Stick: ₱99.00 (Crisp-wrapped cheese rolls with ketchup)
+- Lumpiang Shanghai: ₱129.00 (Pork spring rolls with sweet chili sauce)
+- Hungarian Sausage: ₱129.00 (Grilled, served on a board with dip)
+- Fried Chicken: ₱139.00 (Crunchy breaded fried chicken)
+- Buffalo Wings: ₱139.00 (Saucy glazed wings with ranch dip)
+- Lechon Kawali: ₱149.00 (Crispy deep-fried pork belly with spiced vinegar)
+- Pork Sisig: ₱149.00 (Sizzling, on a hot plate, topped with egg and calamansi)
+- Rice: ₱20.00 (One cup of steamed rice)
+
+### Drinks
+- Mix & Match Beer Bucket of 5: ₱390.00 (Any 5 bottles: San Miguel Light, San Miguel Flavored Beer (Apple), San Miguel Pale Pilsen, San Mig Super Dry, Red Horse)
+- Beer per Bottle: ₱85.00 (San Miguel Pale Pilsen and other bucket choices)
+- Softdrinks: ₱25.00 (Coke, Sprite or Royal)
+- Mineral Water: ₱20.00 (Bottled water)
