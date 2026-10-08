@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Barlow+Condensed:wght@500;600;700&family=Barlow:wght@400;500&display=swap">
 <style>
-/* Layout: banner hero, sticky Food/Drinks switcher, then two menu boards of price rows with dotted leaders. Single dark "night market" look by choice. */
+/* Layout: logo + title header, sticky Food/Drinks switcher, then two menu boards of price rows with dotted leaders. Single dark "night market" look by choice. */
 :root{
   --bg:#140d08;          /* charred wood */
   --panel:#1f150d;
@@ -32,7 +32,16 @@ body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.5 var(--body);
 .intro{display:flex;flex-wrap:wrap;gap:16px 32px;align-items:center;padding-block:16px 8px}
 .logo{width:clamp(150px,30vw,230px);height:auto;filter:drop-shadow(0 8px 24px rgba(255,106,26,.25))}
 .intro-text{display:grid;gap:10px;min-width:0}
-@media (max-width:520px){.intro{justify-content:center;text-align:center}}
+@media (max-width:560px){
+  .intro{flex-wrap:nowrap;gap:14px;padding-block:8px 4px}
+  .logo{width:84px;flex:none}
+  .intro-text{gap:4px}
+  .intro h1{font-size:clamp(26px,8vw,34px)}
+  .intro p{font-size:12px;letter-spacing:.08em}
+  nav{padding-block:8px}
+  nav a{padding:8px 16px;font-size:15px}
+  section{padding-block:18px 4px;scroll-margin-top:60px}
+}
 .intro h1{font:400 clamp(36px,8vw,72px)/.95 var(--display);margin:0;letter-spacing:.01em;text-wrap:balance}
 .intro h1 span{color:var(--amber)}
 .intro p{margin:0;color:var(--muted);font:600 15px/1.3 var(--cond);letter-spacing:.12em;text-transform:uppercase}
@@ -81,7 +90,7 @@ footer{margin-top:40px;padding-top:18px;border-top:1px solid var(--line);color:v
 <div class="wrap">
   <header>
     <div class="intro">
-      <img class="logo" src="../assets/logo.png" alt="The O Spot by Chef Jun logo">
+      <img class="logo" src="../assets/logo.png" width="480" height="424" alt="The O Spot by Chef Jun logo">
       <div class="intro-text">
         <h1>Beer Fest <span>2026</span></h1>
         <p>The O Spot · by Chef Jun · Est. 2025</p>
