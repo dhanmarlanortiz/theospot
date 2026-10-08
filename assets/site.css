@@ -1,0 +1,97 @@
+/* The O Spot shared styles (home + Beer Fest landing).
+   Dark "night market" by default; light "paper menu" when the phone is in light mode or the visitor picks it. */
+:root{
+  --bg:#140d08; --panel:#1f150d; --line:#3a2a1b; --fg:#f6ead8; --muted:#b9a58a;
+  --amber:#ffb21a; --accent:#ffb21a; --flame:#ff6a1a; --flame-text:#ff7a33; --ink:#1a0f05;
+  --glow:rgba(255,106,26,.16);
+  --display:"Bowlby One","Arial Black",Impact,sans-serif;
+  --cond:"Barlow Condensed","Arial Narrow",sans-serif;
+  --body:"Barlow",system-ui,sans-serif;
+  color-scheme:dark;
+}
+@media (prefers-color-scheme: light){
+  :root:not([data-theme="dark"]){--bg:#fbf3e6;--panel:#fffaf2;--line:#e3cfb2;--fg:#2a1a0c;--muted:#6f5a3c;--accent:#a34f00;--flame-text:#b83a08;--glow:rgba(255,150,40,.18);color-scheme:light}
+}
+:root[data-theme="light"]{--bg:#fbf3e6;--panel:#fffaf2;--line:#e3cfb2;--fg:#2a1a0c;--muted:#6f5a3c;--accent:#a34f00;--flame-text:#b83a08;--glow:rgba(255,150,40,.18);color-scheme:light}
+
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.55 var(--body);
+  background-image:radial-gradient(1200px 520px at 50% -8%,var(--glow),transparent 70%)}
+img{max-width:100%;height:auto}
+a{color:var(--accent)}
+.wrap{max-width:1040px;margin:0 auto;padding-inline:16px}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+
+/* Top bar */
+.topbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:color-mix(in srgb,var(--bg) 90%,transparent);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;align-items:center;gap:12px;padding-block:10px}
+.brand{display:flex;align-items:center;gap:10px;color:var(--fg);text-decoration:none;font:700 19px/1 var(--cond);letter-spacing:.04em;text-transform:uppercase;margin-right:auto;min-width:0}
+.brand img{width:40px;height:auto;flex:none}
+.links{display:flex;gap:4px}
+.links a{color:var(--fg);text-decoration:none;font:700 15px/1 var(--cond);letter-spacing:.08em;text-transform:uppercase;padding:9px 10px;border-radius:999px}
+.links a:hover,.links a[aria-current="page"]{color:var(--accent)}
+.links a:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+@media (max-width:560px){.brand span{display:none}.links a{padding:8px 7px;font-size:14px;letter-spacing:.04em}}
+
+/* Theme switch */
+.theme{display:flex;align-items:center;gap:2px;padding:3px;border:1.5px solid var(--line);border-radius:999px;flex:none}
+.theme button{display:grid;place-items:center;width:30px;height:30px;padding:0;border:0;border-radius:999px;background:transparent;color:var(--muted);cursor:pointer}
+.theme button svg{width:17px;height:17px}
+.theme button:hover{color:var(--fg)}
+.theme button[aria-pressed="true"]{background:var(--amber);color:var(--ink)}
+.theme button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* Type */
+.eyebrow{margin:0;color:var(--flame-text);font:700 14px/1.2 var(--cond);letter-spacing:.16em;text-transform:uppercase}
+h1,h2{text-wrap:balance}
+.section{padding-block:56px 8px}
+.section-head{display:flex;flex-wrap:wrap;align-items:end;justify-content:space-between;gap:8px 24px;margin-bottom:20px}
+.section h2{margin:6px 0 0;font:400 clamp(28px,4.5vw,40px)/1.05 var(--display)}
+.lead{margin:0;max-width:52ch;font-size:clamp(17px,2.2vw,19px)}
+.muted{color:var(--muted)}
+
+/* Buttons */
+.actions{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:14px 24px;border-radius:999px;text-decoration:none;
+  font:700 18px/1 var(--cond);letter-spacing:.08em;text-transform:uppercase;border:1.5px solid transparent}
+.btn-primary{background:var(--amber);color:var(--ink)}
+.btn-primary:hover{filter:brightness(1.07)}
+.btn-ghost{border-color:var(--line);color:var(--fg)}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+.btn:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+.text-link{font:700 16px/1 var(--cond);letter-spacing:.08em;text-transform:uppercase;text-decoration:none}
+.text-link:hover{text-decoration:underline}
+
+/* Dish cards */
+.dishes{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,230px),1fr));gap:12px}
+.dish{display:grid;grid-template-rows:auto 1fr auto;gap:6px;padding:18px;border:1px solid var(--line);border-radius:12px;background:var(--panel);min-width:0}
+.dish h3{margin:0;font:700 22px/1.1 var(--cond);text-transform:uppercase;letter-spacing:.03em}
+.dish p{margin:0;color:var(--muted);font-size:15px}
+.price{font:400 22px/1 var(--display);color:var(--accent);font-variant-numeric:tabular-nums}
+.price b{font-family:var(--cond);font-weight:700;font-size:.8em;margin-right:2px}
+
+/* Chips */
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips span{font:600 14px/1 var(--cond);letter-spacing:.06em;text-transform:uppercase;padding:7px 11px;border:1px solid var(--line);border-radius:999px}
+
+/* Visit */
+.visit dl{margin:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,220px),1fr));gap:12px}
+.visit dl div{min-width:0;padding:16px 18px;border:1px solid var(--line);border-radius:12px}
+.visit dt{font:700 13px var(--cond);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.visit dd{margin:4px 0 0;font:600 20px/1.3 var(--cond);overflow-wrap:anywhere}
+
+/* FAQ */
+.faq details{border-bottom:1px dashed var(--line);padding-block:14px}
+.faq details:first-of-type{border-top:1px dashed var(--line)}
+.faq summary{cursor:pointer;font:700 20px/1.3 var(--cond);letter-spacing:.02em}
+.faq summary:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.faq details p{margin:8px 0 0;color:var(--muted);max-width:65ch}
+
+/* Footer */
+.site-footer{margin-top:64px;border-top:1px solid var(--line)}
+.site-footer .wrap{display:flex;flex-wrap:wrap;gap:10px 24px;justify-content:space-between;padding-block:22px calc(28px + env(safe-area-inset-bottom,0px));
+  color:var(--muted);font:600 14px/1.4 var(--cond);letter-spacing:.1em;text-transform:uppercase}
+.site-footer nav{display:flex;flex-wrap:wrap;gap:6px 18px}
+.site-footer a{color:inherit}
+.site-footer a:hover{color:var(--accent)}

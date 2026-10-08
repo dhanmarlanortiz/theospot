@@ -12,6 +12,7 @@
 ## Pages
 
 - [Home](https://dhanmarlanortiz.github.io/theospot/)
+- [Beer Fest 2026](https://dhanmarlanortiz.github.io/theospot/beerfest-2026/): bucket of 5 beers for ₱390, beer ₱85 a bottle, pulutan from ₱99
 - [Beer Fest 2026 Menu & Prices](https://dhanmarlanortiz.github.io/theospot/menu/)
 
 ## Menu
